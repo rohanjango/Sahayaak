@@ -1,0 +1,59 @@
+{
+  "summary": {
+    "total_tests": 8,
+    "passed_tests": 5,
+    "failed_tests": 3,
+    "success_rate": 62.5,
+    "timestamp": "2026-02-04T10:34:46.913060"
+  },
+  "test_results": [
+    {
+      "test": "API Root Endpoint",
+      "success": true,
+      "details": "Status: 200, Response: {'message': 'Voice Form Filling API'}",
+      "timestamp": "2026-02-04T10:34:40.320007"
+    },
+    {
+      "test": "PDF File Upload",
+      "success": false,
+      "details": "Status: 520, Error: {\"detail\":\"Error processing file: EOF marker not found\"}",
+      "timestamp": "2026-02-04T10:34:41.177976"
+    },
+    {
+      "test": "Image File Upload",
+      "success": false,
+      "details": "Status: 520, Error: {\"detail\":\"Error processing file: cannot identify image file <_io.BytesIO object at 0xfb4e9c6eb060>\"}",
+      "timestamp": "2026-02-04T10:34:42.026951"
+    },
+    {
+      "test": "Invalid File Upload",
+      "success": false,
+      "details": "Status: 520 (Expected 400 for invalid format)",
+      "timestamp": "2026-02-04T10:34:42.887381"
+    },
+    {
+      "test": "Save Submission",
+      "success": true,
+      "details": "Status: 200, ID: 4604c29b-2f37-4908-ba57-c6ce60771a9a, Timestamp: 2026-02-04T10:34:43.334424Z",
+      "timestamp": "2026-02-04T10:34:43.740284"
+    },
+    {
+      "test": "Get Submissions",
+      "success": true,
+      "details": "Status: 200, Count: 1 submissions, Latest: 2026-02-04T10:34:43.334424Z",
+      "timestamp": "2026-02-04T10:34:44.591462"
+    },
+    {
+      "test": "Delete Submission",
+      "success": true,
+      "details": "Status: 200, Success: True, Message: Submission deleted successfully",
+      "timestamp": "2026-02-04T10:34:46.058171"
+    },
+    {
+      "test": "Delete Non-existent Submission",
+      "success": true,
+      "details": "Status: 404 (Expected 404 for non-existent ID)",
+      "timestamp": "2026-02-04T10:34:46.912213"
+    }
+  ]
+}
